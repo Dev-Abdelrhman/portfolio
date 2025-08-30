@@ -251,37 +251,30 @@ export function ContactSection() {
               </div>
             </div>
 
-            <motion.div
-              className="bg-slate-800/30 p-6 rounded-lg border border-slate-700"
-              whileHover={{ scale: 1.02, borderColor: "#64748b" }}
-              transition={{ duration: 0.3 }}
-            >
+            <motion.div className="bg-slate-800/30 p-6 rounded-lg border border-slate-700 transition-colors">
               <h4 className="font-semibold mb-4 flex items-center gap-2 text-white">
                 <Briefcase className="h-5 w-5 text-slate-300" />
                 Available for
               </h4>
               <ul className="text-slate-400 space-y-2 text-sm">
                 {[
-                  [
-                    "Full-time backend positions",
-                    "Freelance API development",
-                    "Node.js consulting projects",
-                    "Database design & optimization",
-                  ].map((item, index) => (
-                    <motion.li
-                      key={item}
-                      className="flex items-center gap-2"
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.3 }}
-                      viewport={{ once: true }}
-                      whileHover={{ x: 5 }}
-                    >
-                      <div className="w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
-                      {item}
-                    </motion.li>
-                  )),
-                ]}
+                  "Full-time backend positions",
+                  "Freelance API development",
+                  "Node.js consulting projects",
+                  "Database design & optimization",
+                ].map((item, index) => (
+                  <motion.li
+                    key={item}
+                    className="flex items-center gap-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                    {item}
+                  </motion.li>
+                ))}
               </ul>
             </motion.div>
           </motion.div>

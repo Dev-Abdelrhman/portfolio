@@ -1,9 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { GraduationCap } from "lucide-react"
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { GraduationCap } from "lucide-react";
 
 export function EducationSection() {
   const education = {
@@ -11,7 +16,7 @@ export function EducationSection() {
     institution: "Thebes Academy",
     period: "October 2022 – June 2026 (expected)",
     status: "Currently pursuing",
-  }
+  };
 
   return (
     <section className="py-20 px-4 bg-purple-900/10">
@@ -41,7 +46,8 @@ export function EducationSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Building a strong foundation in computer science and software development
+            Building a strong foundation in computer science and software
+            development
           </motion.p>
         </motion.div>
 
@@ -50,24 +56,17 @@ export function EducationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          whileHover="hover"
         >
-          <Card className="bg-gray-900/50 border-purple-700/50 hover:border-purple-600 transition-all duration-300">
+          <Card className="bg-gray-900/50 border-purple-700/50 transition-all duration-300">
             <CardHeader>
               <div className="flex items-start gap-4">
-                <motion.div
-                  className="p-3 bg-purple-800/30 rounded-lg"
-                  whileHover={{
-                    rotate: [0, 10, -10, 0],
-                    scale: 1.1,
-                    backgroundColor: "rgba(107, 33, 168, 0.5)",
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
+                <motion.div className="p-3 bg-purple-800/30 rounded-lg">
                   <GraduationCap className="h-8 w-8 text-purple-300" />
                 </motion.div>
                 <div className="flex-1">
-                  <CardTitle className="text-2xl text-white">{education.degree}</CardTitle>
+                  <CardTitle className="text-2xl text-white">
+                    {education.degree}
+                  </CardTitle>
                   <CardDescription className="text-purple-300 font-medium text-lg">
                     {education.institution}
                   </CardDescription>
@@ -77,9 +76,11 @@ export function EducationSection() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.3, duration: 0.3 }}
                       viewport={{ once: true }}
-                      whileHover={{ scale: 1.1, y: -2 }}
                     >
-                      <Badge variant="outline" className="border-purple-600 text-purple-300">
+                      <Badge
+                        variant="outline"
+                        className="border-purple-600 text-purple-300"
+                      >
                         {education.period}
                       </Badge>
                     </motion.div>
@@ -88,9 +89,11 @@ export function EducationSection() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.35, duration: 0.3 }}
                       viewport={{ once: true }}
-                      whileHover={{ scale: 1.1, y: -2 }}
                     >
-                      <Badge variant="secondary" className="bg-purple-800/50 text-purple-300">
+                      <Badge
+                        variant="secondary"
+                        className="bg-purple-800/50 text-purple-300"
+                      >
                         {education.status}
                       </Badge>
                     </motion.div>
@@ -102,5 +105,5 @@ export function EducationSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

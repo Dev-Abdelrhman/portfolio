@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export function LanguagesSection() {
   return (
@@ -34,12 +40,13 @@ export function LanguagesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.05, rotateY: 5 }}
           >
-            <Card className="bg-gray-900/50 border-purple-700/50 hover:border-purple-600 transition-all duration-300">
+            <Card className="bg-gray-900/50 border-purple-700/50 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl text-white">Arabic</CardTitle>
-                <CardDescription className="text-purple-300">Native Speaker</CardDescription>
+                <CardDescription className="text-purple-300">
+                  Native Speaker
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="w-full bg-purple-900/30 rounded-full h-2">
@@ -70,12 +77,13 @@ export function LanguagesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.05, rotateY: -5 }}
           >
-            <Card className="bg-gray-900/50 border-purple-700/50 hover:border-purple-600 transition-all duration-300">
+            <Card className="bg-gray-900/50 border-purple-700/50 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl text-white">English</CardTitle>
-                <CardDescription className="text-purple-300">Intermediate</CardDescription>
+                <CardDescription className="text-purple-300">
+                  Intermediate
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="w-full bg-purple-900/30 rounded-full h-2">
@@ -103,5 +111,5 @@ export function LanguagesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,9 +1,24 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Server, Globe, Shield, Database, Code, Zap, Cpu, Terminal } from "lucide-react"
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Server,
+  Globe,
+  Shield,
+  Database,
+  Code,
+  Zap,
+  Cpu,
+  Terminal,
+} from "lucide-react";
 
 export function SkillsSection() {
   const containerVariants = {
@@ -15,7 +30,7 @@ export function SkillsSection() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -27,7 +42,7 @@ export function SkillsSection() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const technicalSkills = [
     {
@@ -53,7 +68,8 @@ export function SkillsSection() {
     {
       name: "Web Security",
       icon: Shield,
-      description: "CORS, CSRF, HTTPS/TLS implementation, XSS/SQL injection prevention",
+      description:
+        "CORS, CSRF, HTTPS/TLS implementation, XSS/SQL injection prevention",
     },
     {
       name: "Testing",
@@ -80,7 +96,7 @@ export function SkillsSection() {
       icon: Terminal,
       description: "Git, GitHub for collaborative development",
     },
-  ]
+  ];
 
   const softSkills = [
     "Communication Skills",
@@ -94,7 +110,7 @@ export function SkillsSection() {
     "Creativity",
     "Project Management",
     "Flexibility",
-  ]
+  ];
 
   return (
     <section className="py-20 px-4">
@@ -139,34 +155,19 @@ export function SkillsSection() {
             <motion.div
               key={skill.name}
               variants={itemVariants}
-              whileHover={{
-                scale: 1.05,
-                rotateY: 5,
-                transition: { duration: 0.3 },
-              }}
               viewport={{ once: true }}
             >
-              <Card className="bg-gray-900/50 border-purple-700/50 hover:border-purple-600 transition-all duration-300 h-full group relative overflow-hidden">
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-700/10 to-purple-600/5"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileHover={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
+              <Card className="bg-gray-900/50 border-purple-700/50 transition-all duration-300 h-full group relative overflow-hidden">
                 <CardHeader className="text-center relative z-10">
-                  <motion.div
-                    className="mx-auto p-3 bg-purple-800/30 rounded-lg w-fit mb-3 group-hover:bg-purple-700/40 transition-colors"
-                    whileHover={{
-                      rotate: [0, 360],
-                      scale: [1, 1.2, 1],
-                      borderRadius: ["0.5rem", "50%", "0.5rem"],
-                    }}
-                    transition={{ duration: 0.8 }}
-                  >
+                  <motion.div className="mx-auto p-3 bg-purple-800/30 rounded-lg w-fit mb-3 transition-colors">
                     <skill.icon className="h-8 w-8 text-purple-300" />
                   </motion.div>
-                  <CardTitle className="text-lg text-white">{skill.name}</CardTitle>
-                  <CardDescription className="text-sm text-purple-200">{skill.description}</CardDescription>
+                  <CardTitle className="text-lg text-white">
+                    {skill.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-purple-200">
+                    {skill.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             </motion.div>
@@ -178,11 +179,12 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          whileHover={{ scale: 1.02 }}
         >
           <Card className="bg-gray-900/50 border-purple-700/50">
             <CardHeader>
-              <CardTitle className="text-2xl text-center text-white">Soft Skills & Strengths</CardTitle>
+              <CardTitle className="text-2xl text-center text-white">
+                Soft Skills & Strengths
+              </CardTitle>
               <CardDescription className="text-center text-purple-200">
                 Personal qualities that drive successful collaboration
               </CardDescription>
@@ -196,9 +198,11 @@ export function SkillsSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.05, duration: 0.3 }}
                     viewport={{ once: true }}
-                    whileHover={{ scale: 1.1, y: -2 }}
                   >
-                    <Badge variant="secondary" className="text-sm bg-purple-800/50 text-purple-300">
+                    <Badge
+                      variant="secondary"
+                      className="text-sm bg-purple-800/50 text-purple-300"
+                    >
                       {skill}
                     </Badge>
                   </motion.div>
@@ -209,5 +213,5 @@ export function SkillsSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
