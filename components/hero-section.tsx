@@ -257,7 +257,7 @@ export function HeroSection() {
             </Button>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             whileHover={{
               scale: 1.05,
               y: -2,
@@ -283,7 +283,7 @@ export function HeroSection() {
                 <span className="relative z-10">Download CV</span>
               </a>
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             whileHover={{
