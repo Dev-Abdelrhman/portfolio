@@ -12,18 +12,20 @@ import { ContactSection } from "@/components/contact-section"
 export default function Portfolio() {
   return (
     <motion.div
-      className="min-h-screen bg-gray-950 text-white"
+      className="min-h-screen bg-gray-950 text-white overflow-x-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <HeroSection />
-      <EducationSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ExperienceSection />
-      <LanguagesSection />
-      <ContactSection />
+      <div className="w-full">
+        <HeroSection />
+        <EducationSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <LanguagesSection />
+        <ContactSection />
+      </div>
     </motion.div>
   )
 }
